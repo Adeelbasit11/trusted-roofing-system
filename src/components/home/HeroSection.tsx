@@ -61,7 +61,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div data-h-content className="container-x relative pb-10 pt-36 sm:pb-14 lg:pb-16">
+      <div data-h-content className="container-x relative pb-10 pt-36 sm:pb-14 lg:pb-16 text-center sm:text-left">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-9">
             <p data-h-fade className="eyebrow mb-7 text-amber">
@@ -82,10 +82,10 @@ export function HeroSection() {
                 </span>
               </span>
             </h1>
-            <p data-h-fade className="lede mt-8 max-w-xl text-white/75">
+            <p data-h-fade className="lede mt-8 max-w-xl mx-auto sm:mx-0 text-white/75">
               Professional roofing solutions, precision installation, and reliable protection for residential and commercial structures.
             </p>
-            <div data-h-fade className="mt-10 flex flex-col gap-4 xs:flex-row xs:flex-wrap">
+            <div data-h-fade className="mt-10 flex flex-col items-stretch sm:items-start justify-center sm:justify-start gap-4 xs:flex-row xs:flex-wrap">
               <Button to="/contact#quote">Get a Free Quote</Button>
               <Button to="/services" variant="outline-light">
                 Explore Our Services
@@ -108,8 +108,8 @@ export function HeroSection() {
         </div>
 
         {/* Bottom bar */}
-        <div data-h-fade className="mt-14 flex flex-col gap-6 border-t border-white/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-4">
+        <div data-h-fade className="mt-14 flex flex-col items-center gap-6 border-t border-white/15 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center justify-center sm:justify-start gap-4">
             <span className="relative h-10 w-px overflow-hidden bg-white/20" aria-hidden>
               <span className="animate-scroll-line absolute inset-x-0 top-0 h-1/2 bg-amber" />
             </span>
@@ -119,7 +119,7 @@ export function HeroSection() {
             href={business.tiktokUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-4 text-white/70 transition-colors hover:text-white"
+            className="group inline-flex items-center justify-center sm:justify-start gap-4 text-white/70 transition-colors hover:text-white"
           >
             <span className="grid h-10 w-10 place-items-center border border-white/20 transition-colors group-hover:border-amber group-hover:text-amber">
               <TikTokIcon />

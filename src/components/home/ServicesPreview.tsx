@@ -81,7 +81,7 @@ export function ServicesPreview() {
                 </div>
 
                 {/* Card Content Body */}
-                <div className="p-5 sm:p-6">
+                <div className="p-5 sm:p-6 text-center sm:text-left">
                   {/* Service Title (Default Blue / Bold Classic) */}
                   <h3 className="font-display text-lg font-bold uppercase tracking-tight text-blue transition-colors duration-300 group-hover:text-navy sm:text-[1.15rem]">
                     <Link to={`/services#${service.slug}`}>
@@ -95,7 +95,7 @@ export function ServicesPreview() {
                   </p>
 
                   {/* Micro Specification Chips (Default Styled) */}
-                  <div className="mt-4 flex flex-wrap gap-1.5">
+                  <div className="mt-4 flex flex-wrap justify-center sm:justify-start gap-1.5">
                     {service.applications.slice(0, 2).map((app, i) => (
                       <span
                         key={i}
