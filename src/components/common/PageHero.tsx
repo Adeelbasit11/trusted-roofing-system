@@ -51,22 +51,22 @@ export function PageHero({ image, eyebrow, title, text, breadcrumb, children, in
       <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/30 to-transparent" aria-hidden />
       <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
 
-      <div className="container-x relative">
-        <div data-hero-fade className="mb-10 flex items-center justify-between gap-6">
+      <div className="container-x relative text-center sm:text-left">
+        <div data-hero-fade className="mb-10 flex items-center justify-center sm:justify-between gap-6">
           <Breadcrumb current={breadcrumb} />
           {index && <span className="hidden font-display text-xs tracking-[0.3em] text-white/50 sm:block">{index}</span>}
         </div>
         <p data-hero-fade className="eyebrow mb-6 text-amber">
           {eyebrow}
         </p>
-        <h1 className="display-xl max-w-6xl">{title}</h1>
+        <h1 className="display-xl max-w-6xl mx-auto sm:mx-0">{title}</h1>
         <div data-hero-rule className="my-8 h-px w-full bg-white/20 sm:my-10" aria-hidden />
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <p data-hero-fade className="lede max-w-xl text-white/75 lg:col-span-6">
+          <p data-hero-fade className="lede max-w-xl mx-auto sm:mx-0 text-white/75 lg:col-span-6">
             {text}
           </p>
           {children && (
-            <div data-hero-fade className="flex flex-wrap gap-4 lg:col-span-6 lg:justify-end">
+            <div data-hero-fade className="flex flex-wrap justify-center sm:justify-start gap-4 lg:col-span-6 lg:justify-end">
               {children}
             </div>
           )}

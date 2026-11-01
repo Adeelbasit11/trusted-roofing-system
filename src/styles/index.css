@@ -57,11 +57,15 @@
     @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16;
   }
   .eyebrow {
-    @apply inline-flex items-center gap-3 font-display text-[0.7rem] font-semibold uppercase tracking-[0.28em];
+    @apply inline-flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 font-display text-[0.7rem] font-semibold uppercase tracking-[0.28em];
   }
   .eyebrow::before {
     content: "";
-    @apply block h-px w-8 bg-current;
+    @apply block h-px w-6 sm:w-8 bg-current;
+  }
+  .eyebrow::after {
+    content: "";
+    @apply block h-px w-6 bg-current sm:hidden;
   }
   .display-xl {
     @apply font-display font-bold uppercase leading-[0.95];

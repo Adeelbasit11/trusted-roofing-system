@@ -31,7 +31,7 @@ export function SectionHeading({
   const dark = tone === 'dark';
   return (
     <ScrollReveal
-      className={`grid gap-6 ${align === 'split' ? 'lg:grid-cols-12 lg:items-end lg:gap-12' : ''} ${className}`}
+      className={`grid gap-6 text-center sm:text-left ${align === 'split' ? 'lg:grid-cols-12 lg:items-end lg:gap-12' : ''} ${className}`}
       stagger={0.1}
     >
       <div className={align === 'split' ? 'lg:col-span-7' : 'max-w-4xl'}>
@@ -47,12 +47,12 @@ export function SectionHeading({
       {(text || action) && (
         <div className={align === 'split' ? 'lg:col-span-5 lg:pb-2' : 'max-w-2xl'}>
           {text && (
-            <p data-reveal className={`lede ${dark ? 'text-white/70' : 'text-muted'}`}>
+            <p data-reveal className={`lede mx-auto sm:mx-0 ${dark ? 'text-white/70' : 'text-muted'}`}>
               {text}
             </p>
           )}
           {action && (
-            <div data-reveal className="mt-8">
+            <div data-reveal className="mt-8 flex justify-center sm:justify-start">
               {action}
             </div>
           )}
