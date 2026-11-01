@@ -21,14 +21,14 @@ export function Footer() {
       <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-40" aria-hidden />
 
       {/* Oversized wordmark band */}
-      <div className="container-x relative border-b border-white/10 pb-12 pt-20 lg:pt-28">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+      <div className="container-x relative border-b border-white/10 pb-12 pt-20 lg:pt-28 text-center sm:text-left">
+        <div className="flex flex-col items-center sm:items-start gap-10 lg:flex-row lg:items-end lg:justify-between">
           <p className="font-display text-[clamp(2.2rem,6vw,5.5rem)] font-bold uppercase leading-[0.92] tracking-[-0.035em]">
             Quality you
             <br />
             can <span className="text-amber">trust.</span>
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-3">
             <a
               href={business.phoneHref}
               className="group inline-flex h-14 items-center gap-3 bg-amber px-6 font-display text-sm font-semibold uppercase tracking-[0.14em] text-navy transition-colors hover:bg-white"
@@ -47,8 +47,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-x relative grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
-        <div className="lg:col-span-4">
+      <div className="container-x relative grid gap-12 py-16 text-center sm:text-left sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+        <div className="lg:col-span-4 flex flex-col items-center sm:items-start">
           <Logo />
           <p className="mt-6 max-w-sm text-[0.95rem] leading-relaxed text-white/60">{business.description}</p>
           <p className="mt-6 text-xs uppercase tracking-[0.25em] text-white/40">Serving {business.market}</p>
@@ -60,7 +60,7 @@ export function Footer() {
             {navigation.map((n) => (
               <li key={n.to}>
                 <Link to={n.to} className={linkCls}>
-                  <span className="h-px w-0 bg-amber transition-all duration-300 group-hover:w-3" />
+                  <span className="hidden sm:block h-px w-0 bg-amber transition-all duration-300 group-hover:w-3" />
                   {n.label}
                 </Link>
               </li>
@@ -74,7 +74,7 @@ export function Footer() {
             {services.map((s) => (
               <li key={s.slug}>
                 <Link to={`/services#${s.slug}`} className={linkCls}>
-                  <span className="h-px w-0 bg-amber transition-all duration-300 group-hover:w-3" />
+                  <span className="hidden sm:block h-px w-0 bg-amber transition-all duration-300 group-hover:w-3" />
                   {s.shortTitle}
                 </Link>
               </li>
@@ -106,7 +106,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-x relative flex flex-col gap-3 border-t border-white/10 py-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+      <div className="container-x relative flex flex-col items-center text-center sm:text-left gap-3 border-t border-white/10 py-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} {business.name}. All rights reserved.
         </p>
