@@ -74,7 +74,7 @@ export function WhyChooseUs() {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
+                <div className="absolute bottom-6 left-6 right-6 text-center sm:text-left">
                   <p className="font-display text-xs uppercase tracking-[0.25em] text-amber">
                     Structural Strength
                   </p>
@@ -87,7 +87,7 @@ export function WhyChooseUs() {
           </div>
 
           {/* Right Column: 4 Editorial Content Blocks */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 text-center sm:text-left">
             <ScrollReveal stagger={0.1}>
               <p data-reveal className="eyebrow mb-5 text-blue">
                 Why Trusted Roofing Systems
@@ -96,7 +96,7 @@ export function WhyChooseUs() {
                 Built on Trust. <br />
                 <span className="text-blue">Defined by Quality.</span>
               </h2>
-              <p data-reveal className="lede mt-6 text-muted max-w-xl">
+              <p data-reveal className="lede mt-6 text-muted max-w-xl mx-auto sm:mx-0">
                 Explore roofing solutions, installation services, and technical guidance designed around your building requirements.
               </p>
             </ScrollReveal>
@@ -111,7 +111,7 @@ export function WhyChooseUs() {
                     className="group py-7 sm:py-8 transition-colors hover:bg-bg/50 px-2 sm:px-4"
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 sm:gap-6 items-baseline">
-                      <div className="sm:col-span-4 flex items-center gap-3">
+                      <div className="sm:col-span-4 flex items-center justify-center sm:justify-start gap-3">
                         <span className="font-display text-xs font-bold text-amber">
                           {pillar.num}
                         </span>
@@ -119,7 +119,7 @@ export function WhyChooseUs() {
                           {pillar.title}
                         </h3>
                       </div>
-                      <div className="sm:col-span-8 flex items-start gap-4">
+                      <div className="sm:col-span-8 flex items-start justify-center sm:justify-start gap-4">
                         <p className="text-sm leading-relaxed text-muted sm:text-[0.95rem]">
                           {pillar.text}
                         </p>
@@ -133,7 +133,7 @@ export function WhyChooseUs() {
               })}
             </div>
 
-            <ScrollReveal className="mt-10 flex flex-wrap gap-4">
+            <ScrollReveal className="mt-10 flex flex-wrap justify-center sm:justify-start gap-4">
               <Button to="/contact#quote" variant="primary">
                 Discuss Your Requirements
               </Button>

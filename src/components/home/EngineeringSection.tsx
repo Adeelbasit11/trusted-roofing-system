@@ -208,7 +208,7 @@ function StackedEngineering() {
   return (
     <section className="relative overflow-hidden bg-navy-900 py-24 text-white sm:py-32" aria-labelledby="eng-title-m">
       <div className="blueprint-grid pointer-events-none absolute inset-0" aria-hidden />
-      <div className="container-x relative">
+      <div className="container-x relative text-center sm:text-left">
         <ScrollReveal stagger={0.1}>
           <p data-reveal className="eyebrow mb-5 text-amber">
             Engineering excellence
@@ -216,7 +216,7 @@ function StackedEngineering() {
           <h2 data-reveal id="eng-title-m" className="display-lg">
             {HEAD}
           </h2>
-          <p data-reveal className="lede mt-6 max-w-xl text-white/65">
+          <p data-reveal className="lede mt-6 max-w-xl mx-auto sm:mx-0 text-white/65">
             {COPY}
           </p>
         </ScrollReveal>
@@ -230,19 +230,19 @@ function StackedEngineering() {
           ].map((c, i) => (
             <figure key={c.cap} data-reveal className={`overflow-hidden ${i ? 'mt-10' : ''}`}>
               <Img image={c.img} className="aspect-[4/5] w-full" />
-              <figcaption className="mt-3 font-display text-[0.6rem] uppercase tracking-[0.2em] text-white/60">{c.cap}</figcaption>
+              <figcaption className="mt-3 font-display text-[0.6rem] uppercase tracking-[0.2em] text-white/60 text-center sm:text-left">{c.cap}</figcaption>
             </figure>
           ))}
         </ScrollReveal>
         <ScrollReveal className="relative mt-16 overflow-hidden">
           <Img image={images.engFinished} className="aspect-[4/5] w-full sm:aspect-[16/10]" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" aria-hidden />
-          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10">
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 text-center sm:text-left">
             <p className="display-md">
               Every stage. <br />
               Every <span className="text-amber">detail.</span>
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center sm:justify-start">
               <Button to="/contact#quote">Request a Free Quote</Button>
             </div>
           </div>

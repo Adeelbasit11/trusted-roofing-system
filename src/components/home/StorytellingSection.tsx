@@ -209,7 +209,7 @@ function StackedStory() {
   return (
     <section className="relative overflow-hidden bg-navy py-24 text-white sm:py-32" aria-labelledby="story-title-m">
       <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-50" aria-hidden />
-      <div className="container-x relative">
+      <div className="container-x relative text-center sm:text-left">
         <ScrollReveal stagger={0.1}>
           <p data-reveal className="eyebrow mb-6 text-amber">
             The process / 4 stages
@@ -218,7 +218,7 @@ function StackedStory() {
             From structure <br />
             to <span className="text-amber">strength.</span>
           </h2>
-          <p data-reveal className="lede mt-6 max-w-xl text-white/70">
+          <p data-reveal className="lede mt-6 max-w-xl mx-auto sm:mx-0 text-white/70">
             {COPY}
           </p>
         </ScrollReveal>
@@ -232,7 +232,7 @@ function StackedStory() {
                   Fig. {s.n} — {s.fig}
                 </figcaption>
               </figure>
-              <div data-reveal className="sm:col-span-5">
+              <div data-reveal className="sm:col-span-5 text-center sm:text-left">
                 <span className="font-display text-5xl font-bold text-amber">{s.n}</span>
                 <h3 className="mt-3 font-display text-2xl font-semibold uppercase tracking-tight">{s.title}</h3>
                 <p className="mt-3 text-white/65">{s.text}</p>
