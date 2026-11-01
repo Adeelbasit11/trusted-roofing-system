@@ -13,7 +13,7 @@ const img = (file: string, alt: string): SiteImage => ({ src: `/images/${file}`,
 
 export const images = {
   // Home — hero & storytelling
-  hero: img('hero-modern-roof.jpg', 'Modern two-storey residence with a dark standing-seam metal roof at dusk'),
+  hero: img('hero-section-image.png', 'Professional roofer installing standing-seam metal roofing with cordless drill at sunset'),
   storyStructure: img('story-1-structure.jpg', 'Building under construction with block walls ready for the roof structure'),
   storyEngineering: img('story-2-engineering.jpg', 'Galvanized steel roof truss framework installed on a house'),
   storyInstallation: img('story-3-installation.jpg', 'Roofing workers installing metal roofing sheets on steel trusses'),
@@ -32,6 +32,7 @@ export const images = {
   svcSelflock: img('svc-selflock-roofing.jpg', 'Modern standing-seam selflock metal roof with clean seams'),
   svcLeakage: img('svc-leakage-repair.jpg', 'Roofer inspecting and sealing a joint on a metal roof'),
   svcAdvice: img('svc-technical-advice.jpg', 'Roof plans and construction drawings reviewed during a consultation'),
+  svcMaintenance: img('hero-modern-roof.jpg', 'Comprehensive roof inspection and preventive maintenance'),
 
   // Supporting
   whyStructural: img('why-structural.jpg', 'Upward view of a galvanized steel roof structure with workers above'),

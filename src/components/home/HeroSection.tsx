@@ -45,7 +45,7 @@ export function HeroSection() {
       <div data-h-frame className="absolute inset-0">
         <div data-h-parallax className="absolute inset-0 -top-[8%] h-[116%]">
           <div data-h-img className="h-full w-full">
-            <Img image={images.hero} priority className="h-full w-full object-[65%_center]" />
+            <Img image={images.hero} priority className="h-full w-full object-[78%_center] md:object-[82%_center] lg:object-[88%_center]" />
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/10 lg:via-navy/55" aria-hidden />
