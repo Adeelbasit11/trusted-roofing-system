@@ -5,7 +5,7 @@ import type { ReactNode } from 'react';
 export type ButtonVariant = 'primary' | 'secondary' | 'outline-light' | 'outline-dark' | 'ghost-light' | 'ghost-dark';
 
 const base =
-  'group/btn relative isolate inline-flex items-center justify-center gap-3 overflow-hidden whitespace-nowrap font-display text-[0.74rem] sm:text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-500 ease-[var(--ease-premium)] disabled:cursor-not-allowed disabled:opacity-60';
+  'group/btn relative isolate items-center justify-center gap-3 overflow-hidden whitespace-nowrap font-display text-[0.74rem] sm:text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-colors duration-500 ease-[var(--ease-premium)] disabled:cursor-not-allowed disabled:opacity-60';
 
 const sizes = {
   md: 'h-14 px-6 sm:px-7',
@@ -64,7 +64,8 @@ export function Button({
   ariaLabel,
 }: Props) {
   const isGhost = variant.startsWith('ghost');
-  const cls = `${base} ${isGhost ? '' : sizes[size]} ${variants[variant]} ${className}`;
+  const displayCls = /\bhidden\b/.test(className) ? '' : 'inline-flex';
+  const cls = `${base} ${displayCls} ${isGhost ? '' : sizes[size]} ${variants[variant]} ${className}`;
 
   const inner = (
     <>

@@ -11,13 +11,13 @@ export function Logo({ onClick }: Props) {
     <Link
       to="/"
       onClick={onClick}
-      className="group inline-flex items-center"
+      className="group inline-flex shrink-0 items-center"
       aria-label="Trusted Roofing System — Home"
     >
       <img
         src="/images/trusted-site-logo.png"
         alt="Trusted Roofing System — Quality You Can Trust"
-        className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] filter drop-shadow-md"
+        className="h-12 xs:h-14 sm:h-15 lg:h-16 w-auto shrink-0 object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] drop-shadow-[0_2px_12px_rgba(255,255,255,0.16)]"
       />
     </Link>
   );
