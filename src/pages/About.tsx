@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, CheckCircle2, Target, Eye } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { PageHero, HeroLines } from '../components/common/PageHero';
-import { CTABanner } from '../components/common/CTABanner';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { Button } from '../components/common/Button';
 import { Img } from '../components/common/Img';
@@ -389,30 +388,6 @@ export function About() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 7: CONTACT CTA */}
-      <CTABanner
-        image={images.ctaAlt}
-        eyebrow="Start the Conversation"
-        title={
-          <>
-            Let's Discuss Your <br />
-            <span className="text-amber">Roofing Project.</span>
-          </>
-        }
-        text="Contact Trusted Roofing Systems to discuss materials, roof framing, or installation requirements for your building."
-        actions={
-          <>
-            <Button to="/contact#quote" variant="primary">
-              Get a Free Quote
-            </Button>
-            <Button to="/projects" variant="outline-light">
-              View Our Work
-            </Button>
-          </>
-        }
-        showPhone={true}
-      />
     </>
   );
 }

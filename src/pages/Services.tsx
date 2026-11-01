@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Check, Wrench } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { PageHero, HeroLines } from '../components/common/PageHero';
-import { CTABanner } from '../components/common/CTABanner';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { Button } from '../components/common/Button';
 import { Img } from '../components/common/Img';
@@ -286,33 +285,6 @@ export function Services() {
           </div>
         </div>
       </section>
-
-      {/* SECTION 5: FINAL CTA */}
-      <CTABanner
-        image={images.ctaHome}
-        eyebrow="Need Technical Guidance?"
-        title={
-          <>
-            Not Sure Which Roofing <br />
-            <span className="text-amber">Solution You Need?</span>
-          </>
-        }
-        text="Tell us about your project and discuss the available roofing options. Our free technical advice helps you understand materials, framework needs, and installation approaches."
-        actions={
-          <>
-            <Button
-              to={`/contact?service=${encodeURIComponent('Free Technical Advice')}#quote`}
-              variant="primary"
-            >
-              Get Technical Advice
-            </Button>
-            <Button to="/projects" variant="outline-light">
-              Explore Projects
-            </Button>
-          </>
-        }
-        showPhone={true}
-      />
     </>
   );
 }

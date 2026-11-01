@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback } from 'react';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { PageHero, HeroLines } from '../components/common/PageHero';
-import { CTABanner } from '../components/common/CTABanner';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { Button } from '../components/common/Button';
 import { Img } from '../components/common/Img';
@@ -305,30 +304,6 @@ export function Projects() {
           </div>
         </div>
       )}
-
-      {/* SECTION 5: PROJECT ENQUIRY CTA */}
-      <CTABanner
-        image={images.ctaAlt}
-        eyebrow="Custom Project Quotations"
-        title={
-          <>
-            Have a Similar <br />
-            <span className="text-amber">Project in Mind?</span>
-          </>
-        }
-        text="Let's discuss the roofing requirements for your next building project. Send us your drawings, dimensions, or site location for tailored advice."
-        actions={
-          <>
-            <Button to="/contact#quote" variant="primary">
-              Discuss Your Project
-            </Button>
-            <Button to="/services" variant="outline-light">
-              Explore Services
-            </Button>
-          </>
-        }
-        showPhone={true}
-      />
     </>
   );
 }
