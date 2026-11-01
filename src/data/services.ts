@@ -134,6 +134,22 @@ export const services: Service[] = [
     benefits: ['Clearer understanding of options', 'Project-specific discussion', 'No-cost initial guidance'],
     image: images.svcAdvice,
   },
+  {
+    slug: 'roof-maintenance',
+    number: '08',
+    title: 'Roof Maintenance & Care',
+    shortTitle: 'Maintenance & Care',
+    formValue: 'Roof Maintenance & Care',
+    label: 'Care / Longevity',
+    summary:
+      'Periodic structural inspections, preventative care, and re-fastening to safeguard and prolong your roof’s life.',
+    intro: 'Proactive maintenance and inspections to protect your roofing investment.',
+    detail:
+      'Routine roofing checks identify loose fasteners, blocked gutters, surface wear, and early weathering before they become costly leaks. Our maintenance service provides detailed structural assessments and essential preventative care for residential, commercial, and industrial roofing systems across Ghana.',
+    applications: ['Periodic residential checkups', 'Commercial roof maintenance', 'Pre-rainy season inspections', 'Fastener tightening & re-sealing'],
+    benefits: ['Extends overall roof lifespan', 'Catches minor wear before leaks develop', 'Preserves structural aesthetics & value'],
+    image: images.svcMaintenance,
+  },
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
