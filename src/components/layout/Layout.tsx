@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { FloatingWhatsApp } from '../common/FloatingWhatsApp';
 import { ScrollTrigger } from '../../lib/gsap';
 import { useRefreshOnImagesLoaded } from '../../hooks/useRefreshOnImagesLoaded';
 
@@ -44,6 +45,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }
