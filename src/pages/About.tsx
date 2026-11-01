@@ -95,7 +95,7 @@ export function About() {
             </ScrollReveal>
 
             {/* Right Column: Text Layout */}
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-6 text-center sm:text-left">
               <ScrollReveal stagger={0.1}>
                 <p data-reveal className="eyebrow mb-5 text-blue">
                   Company Introduction
@@ -112,7 +112,7 @@ export function About() {
                 </p>
 
                 {/* Scope checklist */}
-                <div data-reveal className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 border-y border-line py-6">
+                <div data-reveal className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 border-y border-line py-6 text-left">
                   {[
                     'Roofing Systems & Planning',
                     'Metal Roofing Profiles',
@@ -123,14 +123,14 @@ export function About() {
                     'Selflock Concealed Roofing',
                     'Free Technical Advice',
                   ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 text-sm text-navy font-medium">
+                    <div key={item} className="flex items-center justify-center sm:justify-start gap-2.5 text-sm text-navy font-medium">
                       <CheckCircle2 className="h-4 w-4 text-amber shrink-0" />
                       <span>{item}</span>
                     </div>
                   ))}
                 </div>
 
-                <div data-reveal className="mt-8 flex items-center gap-6">
+                <div data-reveal className="mt-8 flex items-center justify-center sm:justify-start gap-6">
                   <div>
                     <span className="font-display text-2xl font-bold text-navy">Ghana</span>
                     <span className="block text-xs uppercase tracking-[0.2em] text-muted">Primary Market</span>
@@ -169,8 +169,8 @@ export function About() {
 
           <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Panel 1: Mission */}
-            <ScrollReveal className="relative overflow-hidden border border-line bg-white p-8 sm:p-12 shadow-sm transition-all duration-300 hover:border-blue/30 hover:shadow-md">
-              <div className="flex items-center gap-4 mb-6">
+            <ScrollReveal className="relative overflow-hidden border border-line bg-white p-8 sm:p-12 text-center sm:text-left shadow-sm transition-all duration-300 hover:border-blue/30 hover:shadow-md">
+              <div className="flex items-center justify-center sm:justify-start gap-4 mb-6">
                 <span className="grid h-12 w-12 place-items-center bg-blue/10 text-blue">
                   <Target className="h-6 w-6" />
                 </span>
@@ -181,7 +181,7 @@ export function About() {
               <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase text-navy">
                 Our Mission
               </h3>
-              <blockquote className="mt-6 border-l-2 border-amber pl-5 text-lg sm:text-xl font-display font-medium leading-relaxed text-navy italic">
+              <blockquote className="mt-6 border-l-0 sm:border-l-2 border-amber sm:pl-5 text-lg sm:text-xl font-display font-medium leading-relaxed text-navy italic">
                 “To provide roofing solutions and services that respond to the structural and practical requirements of each project.”
               </blockquote>
               <p className="mt-6 text-sm text-muted leading-relaxed">
@@ -190,10 +190,10 @@ export function About() {
             </ScrollReveal>
 
             {/* Panel 2: Vision */}
-            <ScrollReveal className="relative overflow-hidden border border-line bg-navy p-8 sm:p-12 text-white shadow-sm transition-all duration-300 hover:border-amber/30 hover:shadow-md">
+            <ScrollReveal className="relative overflow-hidden border border-line bg-navy p-8 sm:p-12 text-center sm:text-left text-white shadow-sm transition-all duration-300 hover:border-amber/30 hover:shadow-md">
               <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-20" aria-hidden />
               <div className="relative">
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center justify-center sm:justify-start gap-4 mb-6">
                   <span className="grid h-12 w-12 place-items-center bg-amber/20 text-amber">
                     <Eye className="h-6 w-6" />
                   </span>
@@ -204,7 +204,7 @@ export function About() {
                 <h3 className="font-display text-2xl sm:text-3xl font-bold uppercase text-white">
                   Our Vision
                 </h3>
-                <blockquote className="mt-6 border-l-2 border-amber pl-5 text-lg sm:text-xl font-display font-medium leading-relaxed text-white/95 italic">
+                <blockquote className="mt-6 border-l-0 sm:border-l-2 border-amber sm:pl-5 text-lg sm:text-xl font-display font-medium leading-relaxed text-white/95 italic">
                   “To build customer confidence through professional roofing solutions, quality-focused work, and reliable technical guidance.”
                 </blockquote>
                 <p className="mt-6 text-sm text-white/70 leading-relaxed">
@@ -235,7 +235,7 @@ export function About() {
             {services.map((s) => (
               <ScrollReveal
                 key={s.slug}
-                className="group relative flex flex-col justify-between border border-line bg-bg/50 p-6 transition-all duration-300 hover:border-navy hover:bg-white hover:shadow-lg"
+                className="group relative flex flex-col justify-between border border-line bg-bg/50 p-6 text-center sm:text-left transition-all duration-300 hover:border-navy hover:bg-white hover:shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between border-b border-line pb-4 mb-5">
@@ -251,7 +251,7 @@ export function About() {
                     {s.intro}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-line/60">
+                <div className="mt-6 pt-4 border-t border-line/60 flex justify-center sm:justify-start">
                   <Link
                     to={`/services#${s.slug}`}
                     className="inline-flex items-center gap-2 font-display text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-navy group-hover:text-blue transition-colors"
@@ -292,9 +292,9 @@ export function About() {
             {processSteps.map((p) => (
               <ScrollReveal
                 key={p.step}
-                className="relative z-10 flex flex-col border border-white/10 bg-navy-900/90 p-6 backdrop-blur-sm transition-all duration-300 hover:border-amber/40"
+                className="relative z-10 flex flex-col border border-white/10 bg-navy-900/90 p-6 text-center sm:text-left backdrop-blur-sm transition-all duration-300 hover:border-amber/40"
               >
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-center sm:justify-between gap-2 mb-4">
                   <span className="font-display text-2xl font-bold text-amber">{p.step}</span>
                   <span className="h-2 w-2 rounded-full bg-amber" />
                 </div>
@@ -318,7 +318,7 @@ export function About() {
       <section className="relative bg-white py-24 sm:py-32" aria-labelledby="why-about-heading">
         <div className="container-x relative">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 text-center sm:text-left">
               <ScrollReveal stagger={0.1}>
                 <p data-reveal className="eyebrow mb-5 text-blue">
                   Core Values
@@ -327,7 +327,7 @@ export function About() {
                   Focused On What <br />
                   <span className="text-blue">Matters Most.</span>
                 </h2>
-                <p data-reveal className="lede mt-6 text-muted max-w-xl">
+                <p data-reveal className="lede mt-6 text-muted max-w-xl mx-auto sm:mx-0">
                   We focus on the fundamental qualities of good roofing: structural soundness, proper water management, and straightforward communication.
                 </p>
 
@@ -350,7 +350,7 @@ export function About() {
                       desc: 'Direct communication via telephone, WhatsApp, or online quote requests without administrative delays.',
                     },
                   ].map((item, idx) => (
-                    <div key={item.title} className="flex gap-4 items-start border-b border-line pb-5">
+                    <div key={item.title} className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center sm:items-start border-b border-line pb-5">
                       <span className="font-display text-xs font-bold text-amber mt-1">
                         0{idx + 1}
                       </span>
