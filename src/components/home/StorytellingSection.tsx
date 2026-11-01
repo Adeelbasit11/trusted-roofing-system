@@ -78,8 +78,11 @@ function PinnedStory() {
           start: 'top top',
           end: () => `+=${window.innerHeight * 3.4}`,
           pin: true,
-          scrub: 1,
-          anticipatePin: 1,
+          pinSpacing: true,
+          scrub: 0.6,
+          anticipatePin: 0,
+          fastScrollEnd: 2500,
+          preventOverlaps: true,
           invalidateOnRefresh: true,
         },
       });
@@ -104,8 +107,7 @@ function PinnedStory() {
           .to(texts[i], { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, at + 0.4)
           .to(caps[i - 1], { autoAlpha: 0, y: -12, duration: 0.3 }, at)
           .to(caps[i], { autoAlpha: 1, y: 0, duration: 0.4 }, at + 0.5)
-          .to(ticks[i], { scaleX: 1, duration: 0.6 }, at + 0.2)
-          .to('[data-counter]', { yPercent: -100 * i, duration: 0.6, ease: 'power3.inOut' }, at + 0.2);
+          .to(ticks[i], { scaleX: 1, duration: 0.6 }, at + 0.2);
       });
 
       tl.to('[data-progress]', { scaleY: 1, duration: tl.duration() - 0.6 }, 0.6).to({}, { duration: 0.4 });
@@ -114,7 +116,7 @@ function PinnedStory() {
   );
 
   return (
-    <section ref={root} className="relative h-screen overflow-hidden bg-navy text-white" aria-labelledby="story-title">
+    <section ref={root} data-pinned-story className="relative h-screen overflow-hidden bg-navy text-white" aria-labelledby="story-title">
       <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-60" aria-hidden />
 
       {/* Left narrative panel */}
@@ -126,25 +128,18 @@ function PinnedStory() {
           </h2>
           <p className="mt-6 max-w-sm text-[0.95rem] leading-relaxed text-white/60">{COPY}</p>
 
-          <div className="mt-12 flex items-start gap-8">
-            {/* Counter */}
-            <div className="h-[4.5rem] overflow-hidden font-display text-[4.5rem] font-bold leading-none text-amber" aria-hidden>
-              <div data-counter>
-                {stages.map((s) => (
-                  <div key={s.n} className="h-[4.5rem]">
-                    {s.n}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative min-h-[150px] flex-1">
-              {stages.map((s) => (
-                <div key={s.n} data-stage className="absolute inset-0">
+          <div className="relative mt-12 min-h-[160px]">
+            {stages.map((s) => (
+              <div key={s.n} data-stage className="absolute inset-0 flex items-start gap-7">
+                <div className="w-[5.2rem] shrink-0 font-display text-[4.5rem] font-bold leading-none text-amber select-none" aria-hidden>
+                  {s.n}
+                </div>
+                <div className="flex-1 pt-1.5">
                   <h3 className="font-display text-2xl font-semibold uppercase tracking-tight">{s.title}</h3>
                   <p className="mt-3 max-w-xs text-[0.95rem] leading-relaxed text-white/65">{s.text}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* Stage ticks */}

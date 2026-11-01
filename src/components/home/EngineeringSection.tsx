@@ -94,8 +94,11 @@ function PinnedEngineering() {
           start: 'top top',
           end: () => `+=${window.innerHeight * 3.6}`,
           pin: true,
-          scrub: 1,
-          anticipatePin: 1,
+          pinSpacing: true,
+          scrub: 0.6,
+          anticipatePin: 0,
+          fastScrollEnd: 2500,
+          preventOverlaps: true,
           invalidateOnRefresh: true,
         },
       });
@@ -127,7 +130,7 @@ function PinnedEngineering() {
   );
 
   return (
-    <section ref={root} className="relative h-screen overflow-hidden bg-navy-900 text-white" aria-labelledby="eng-title">
+    <section ref={root} data-pinned-eng className="relative h-screen overflow-hidden bg-navy-900 text-white" aria-labelledby="eng-title">
       <div data-bp className="blueprint-grid absolute inset-0" aria-hidden />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(23,100,232,0.18),transparent_65%)]" aria-hidden />
 

@@ -130,6 +130,20 @@
   opacity: 0;
 }
 
+/* GSAP ScrollTrigger Pinned Spacer Zero-Flicker Fix
+   Ensures pinned spacers match the dark navy theme so fast scrolling never reveals body background */
+.pin-spacer {
+  background-color: var(--color-navy) !important;
+}
+
+[data-pinned-story],
+[data-pinned-eng] {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
