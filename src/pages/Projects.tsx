@@ -110,7 +110,7 @@ export function Projects() {
           />
 
           {/* Category Filter Buttons */}
-          <div className="mt-12 flex flex-wrap items-center gap-2 sm:gap-3 border-b border-line pb-6">
+          <div className="mt-12 flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3 border-b border-line pb-6">
             {projectFilters.map((cat) => {
               const active = activeFilter === cat;
               return (

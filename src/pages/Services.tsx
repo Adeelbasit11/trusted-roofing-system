@@ -67,7 +67,7 @@ export function Services() {
       {/* SECTION 2: STICKY HORIZONTAL SERVICE NAVIGATION BAR */}
       <nav
         aria-label="Service navigation"
-        className="sticky top-20 z-30 border-y border-line bg-white/95 backdrop-blur-md transition-all shadow-sm"
+        className="sticky top-[68px] sm:top-[74px] lg:top-[78px] z-30 border-y border-line bg-white/95 backdrop-blur-md transition-all shadow-sm"
       >
         <div className="container-x overflow-x-auto no-scrollbar py-3">
           <ul className="flex items-center gap-2 sm:gap-3 min-w-max">
@@ -142,9 +142,9 @@ export function Services() {
                   </ScrollReveal>
 
                   {/* Content Column */}
-                  <div className="lg:col-span-6">
+                  <div className="lg:col-span-6 text-center sm:text-left">
                     <ScrollReveal stagger={0.08}>
-                      <div className="flex items-center gap-3 mb-4">
+                      <div className="flex items-center justify-center sm:justify-start gap-3 mb-4">
                         <span className="font-display text-sm font-bold text-blue">
                           {service.number}
                         </span>
@@ -170,16 +170,16 @@ export function Services() {
                       </p>
 
                       {/* Applications & Benefits Grid */}
-                      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 border-y border-line py-6">
+                      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 border-y border-line py-6 text-left">
                         {/* Relevant Applications */}
                         <div>
-                          <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3 flex items-center gap-2">
+                          <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3 flex items-center justify-center sm:justify-start gap-2">
                             <Wrench className="h-3.5 w-3.5 text-blue" />
                             Relevant Applications
                           </h3>
                           <ul className="space-y-2">
                             {service.applications.map((app) => (
-                              <li key={app} className="flex items-start gap-2 text-xs sm:text-sm text-muted">
+                              <li key={app} className="flex items-start justify-center sm:justify-start gap-2 text-xs sm:text-sm text-muted">
                                 <span className="h-1.5 w-1.5 rounded-full bg-blue shrink-0 mt-2" />
                                 <span>{app}</span>
                               </li>
@@ -189,13 +189,13 @@ export function Services() {
 
                         {/* Potential Benefits */}
                         <div>
-                          <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3 flex items-center gap-2">
+                          <h3 className="font-display text-xs font-bold uppercase tracking-[0.2em] text-navy mb-3 flex items-center justify-center sm:justify-start gap-2">
                             <Check className="h-3.5 w-3.5 text-amber" />
                             Potential Benefits
                           </h3>
                           <ul className="space-y-2">
                             {service.benefits.map((ben) => (
-                              <li key={ben} className="flex items-start gap-2 text-xs sm:text-sm text-muted">
+                              <li key={ben} className="flex items-start justify-center sm:justify-start gap-2 text-xs sm:text-sm text-muted">
                                 <span className="h-1.5 w-1.5 rounded-full bg-amber shrink-0 mt-2" />
                                 <span>{ben}</span>
                               </li>
@@ -205,7 +205,7 @@ export function Services() {
                       </div>
 
                       {/* Service Action Buttons */}
-                      <div className="mt-8 flex flex-wrap items-center gap-4">
+                      <div className="mt-8 flex flex-wrap items-center justify-center sm:justify-start gap-4">
                         <Button
                           to={`/contact?service=${encodeURIComponent(service.formValue)}#quote`}
                           variant="primary"
@@ -263,7 +263,7 @@ export function Services() {
             ].map((combo) => (
               <ScrollReveal
                 key={combo.title}
-                className="group border border-line bg-bg p-8 transition-all hover:border-navy hover:bg-white hover:shadow-md"
+                className="group border border-line bg-bg p-8 text-center sm:text-left transition-all hover:border-navy hover:bg-white hover:shadow-md"
               >
                 <h3 className="font-display text-lg font-bold uppercase text-navy group-hover:text-blue transition-colors">
                   {combo.title}
@@ -271,7 +271,7 @@ export function Services() {
                 <p className="mt-3 text-sm text-muted leading-relaxed">
                   {combo.desc}
                 </p>
-                <div className="mt-6 pt-4 border-t border-line">
+                <div className="mt-6 pt-4 border-t border-line flex justify-center sm:justify-start">
                   <Link
                     to={combo.link}
                     className="inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-[0.16em] text-navy group-hover:text-blue transition-colors"
