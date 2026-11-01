@@ -248,7 +248,7 @@ export function Contact() {
               {/* Top Accent Gradient Border */}
               <div className="absolute top-0 left-0 right-0 h-[3.5px] w-full bg-gradient-to-r from-blue via-blue-600 to-amber transition-all duration-300 group-hover:brightness-125" />
 
-              <div>
+              <div className="text-center sm:text-left">
                 {/* Header with Icon and Live Status */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-blue/10 text-blue transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
@@ -297,7 +297,7 @@ export function Contact() {
               {/* Top Accent Gradient Border */}
               <div className="absolute top-0 left-0 right-0 h-[3.5px] w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 transition-all duration-300 group-hover:brightness-125" />
 
-              <div>
+              <div className="text-center sm:text-left">
                 {/* Header with Icon and Live Status */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-emerald-500/10 text-emerald-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
@@ -348,7 +348,7 @@ export function Contact() {
               {/* Top Accent Gradient Border */}
               <div className="absolute top-0 left-0 right-0 h-[3.5px] w-full bg-gradient-to-r from-[#FF0050] via-[#000000] to-[#00F2FE] transition-all duration-300 group-hover:brightness-125" />
 
-              <div>
+              <div className="text-center sm:text-left">
                 {/* Header with Icon and Stats */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="grid h-12 w-12 place-items-center rounded-xl bg-navy/10 text-navy transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
@@ -424,8 +424,8 @@ export function Contact() {
               <div className="pointer-events-none absolute -bottom-24 -left-16 h-56 w-56 rounded-full bg-amber/20 blur-3xl" aria-hidden />
               <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-amber via-blue to-amber" aria-hidden />
 
-              <div className="relative flex h-full flex-col">
-                <span className="inline-flex w-fit items-center gap-2 border border-amber/40 bg-amber/10 px-3 py-1 font-display text-[0.65rem] font-bold uppercase tracking-[0.22em] text-amber">
+              <div className="relative flex h-full flex-col text-center sm:text-left">
+                <span className="inline-flex w-fit mx-auto sm:mx-0 items-center gap-2 border border-amber/40 bg-amber/10 px-3 py-1 font-display text-[0.65rem] font-bold uppercase tracking-[0.22em] text-amber">
                   <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber" /> Free Quote
                 </span>
                 <h3 id="form-heading" className="mt-6 font-display text-3xl font-bold uppercase leading-[1.05] tracking-tight">
@@ -435,7 +435,7 @@ export function Contact() {
                   Fill in the form and our roofing team will review your requirements and get back to you with clear technical guidance.
                 </p>
 
-                <ol className="mt-10 space-y-6">
+                <ol className="mt-10 space-y-6 text-left">
                   {[
                     { icon: FileText, t: 'Share your details', d: 'Service, location and a short description.' },
                     { icon: Clock, t: 'We review the project', d: 'The team studies your requirements and photos.' },
@@ -701,7 +701,7 @@ export function Contact() {
                 desc: 'Current stage photographs or architectural elevation drawings showing roof slopes and dimensions.',
               },
             ].map((r) => (
-              <div key={r.num} className="border border-line bg-bg p-6">
+              <div key={r.num} className="border border-line bg-bg p-6 text-center sm:text-left">
                 <span className="font-display text-sm font-bold text-amber">{r.num}</span>
                 <h3 className="mt-2 font-display text-base font-bold uppercase text-navy">
                   {r.title}
@@ -719,16 +719,16 @@ export function Contact() {
       <section className="relative bg-bg py-20 sm:py-28" aria-labelledby="location-heading">
         <div className="container-x relative">
           <div className="grid gap-12 lg:grid-cols-12 items-center">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 text-center sm:text-left">
               <p className="eyebrow mb-5 text-blue">Regional Presence</p>
               <h2 id="location-heading" className="display-md text-navy">
                 Operating Across <br />
                 <span className="text-blue">Ghana, West Africa.</span>
               </h2>
-              <p className="lede mt-6 text-muted max-w-xl">
+              <p className="lede mt-6 text-muted max-w-xl mx-auto sm:mx-0">
                 Trusted Roofing Systems serves clients across the Ghanaian building and construction sector, undertaking roofing projects for homes and commercial structures.
               </p>
-              <div className="mt-8 space-y-4 text-sm text-muted">
+              <div className="mt-8 space-y-4 text-sm text-muted text-left">
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-amber shrink-0" />
                   <span>Target Market: Ghana (Accra, Kumasi, Tema, and surrounding regions)</span>
@@ -740,7 +740,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 border border-line bg-white p-8">
+            <div className="lg:col-span-5 border border-line bg-white p-8 text-center sm:text-left">
               <h3 className="font-display text-lg font-bold uppercase text-navy mb-4">
                 Ready to Discuss?
               </h3>
